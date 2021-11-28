@@ -2,8 +2,6 @@
 
   <v-app id="inspire">
 
-    <ToolBar></ToolBar>
-
     <v-navigation-drawer 
     v-model="drawer"
       app
@@ -56,8 +54,10 @@
       <v-icon>mdi-checkbox-blank-outline</v-icon>
       <v-icon>mdi-close</v-icon>
     </v-system-bar>
+
     
-   <!-- <v-app-bar
+    
+    <v-app-bar
       height="50px"
       app
       color="black"
@@ -94,7 +94,7 @@
        <v-btn icon>
           <v-icon>mdi-map-marker</v-icon>
         </v-btn>
-    </v-app-bar> -->
+    </v-app-bar> 
   
    
     <v-main>
@@ -154,7 +154,6 @@
 </template>
 
 <script>
-import ToolBar from './components/ToolBar'
   export default { 
     data: () => ({
        drawer: null,
@@ -172,13 +171,7 @@ import ToolBar from './components/ToolBar'
           'Blog',
           'Contact Us',
         ],  
-    }),
-
-     components: {
-        ToolBar
-        }   
-    
-    
+    }),   
   }
 </script>
 
