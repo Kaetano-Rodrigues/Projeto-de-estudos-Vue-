@@ -1,3 +1,6 @@
+![account](https://user-images.githubusercontent.com/75049194/143776573-de2ec710-4a66-4c5e-bb60-da5a4b7bf63e.PNG)
+![place](https://user-images.githubusercontent.com/75049194/143776576-6a587f0c-394f-4ba1-b165-dca8fdb2a542.PNG)
+![ticket](https://user-images.githubusercontent.com/75049194/143776577-09fca2db-d022-4a3b-a5d5-4d4f67694653.PNG)
 # af-lab
 
 ## Project setup
