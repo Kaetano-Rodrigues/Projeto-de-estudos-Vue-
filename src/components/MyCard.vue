@@ -44,6 +44,8 @@
 </template>
 
 <script>
+
   export default {
+    props: ["cardid", "cardInfo"],
   }
 </script>

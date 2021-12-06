@@ -4,62 +4,46 @@
   <v-row >
       
       <v-col
-        v-for="n in 1"
-        :key="n"
-        cols="5"
-        lg="5"
+         v-for="{ data, i } in events" 
+         :key="i" 
+         cols="12" 
+         sm="4"
       >
-      <MyCard></MyCard>  
+     
+      <MyCard :cardid="i" :cardInfo="data"></MyCard>  
      
       </v-col>
-      
-      
-      
-    </v-row>
-
-     <v-row 
-    
-     >
-      <v-col
-        v-for="n in 1"
-        :key="n"
-        cols="5"
-        lg="5"
-      >
-      <MyCard2></MyCard2>  
-      
-      </v-col>
-       
-    </v-row>
-    
-     <v-row >
-      <v-col
-        v-for="n in 1"
-        :key="n"
-        cols="5"
-        lg="5"
-      >
-      
-      <MyCard3></MyCard3>
-      
-      </v-col>
-    </v-row>
+  </v-row>            
   
 </div>
   
 </template>
 
 <script>
-  import MyCard from '../components/MyCard'
-  import MyCard2 from '../components/MyCard2'
-  import MyCard3 from '../components/MyCard3'
-  export default {
-    name: 'Eventos',
-
-    components: {
-      MyCard,
-      MyCard2,
-      MyCard3
+import MyCard from "../components/MyCard";
+export default {
+  name: "Home",
+  data() {
+    return {
+      titleview: this.$store.state.title,
+    };
+  },
+  computed: {
+    myCards() {
+      return this.$store.state.cards;
     },
-  }
+    title() {
+      return this.$store.getters.bigTitle;
+    },
+    events() {
+      return this.$store.state.events;
+    },
+  },
+  components: {
+    MyCard,
+  },
+  async created() {
+    this.$store.dispatch("fecthEvents");
+  },
+};
 </script>
